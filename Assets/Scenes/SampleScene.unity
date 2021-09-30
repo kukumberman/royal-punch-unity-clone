@@ -1221,6 +1221,7 @@ GameObject:
   - component: {fileID: 739617824}
   - component: {fileID: 739617823}
   - component: {fileID: 739617822}
+  - component: {fileID: 739617826}
   - component: {fileID: 739617825}
   m_Layer: 0
   m_Name: '[PlayerController]'
@@ -1259,6 +1260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MoveSpeed: 5
   m_Enemy: {fileID: 1078482409}
+  m_Animator: {fileID: 739617826}
 --- !u!136 &739617823
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1301,8 +1303,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e84da87e7efc5b4ab3c84e75ac03a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_StartAmount: 50
+  m_StartAmount: 100
   m_MaxAmount: 100
+--- !u!114 &739617826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739617820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0756c0b194ee8e4b92cbbeb2c1f63b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 6088960243056863291}
 --- !u!1 &814390425
 GameObject:
   m_ObjectHideFlags: 0
@@ -1957,7 +1972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e84da87e7efc5b4ab3c84e75ac03a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_StartAmount: 100
+  m_StartAmount: 200
   m_MaxAmount: 200
 --- !u!1 &1173095959
 GameObject:
@@ -1968,6 +1983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1173095960}
+  - component: {fileID: 1173095961}
   m_Layer: 0
   m_Name: AdditionalBoxer
   m_TagString: Untagged
@@ -1993,6 +2009,25 @@ Transform:
   m_Father: {fileID: 1078482410}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1173095961
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173095959}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 62623e6e0b985a84fb569a3fcd3c64e9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1194213014
 GameObject:
   m_ObjectHideFlags: 0
@@ -2457,8 +2492,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Owner: {fileID: 739617825}
   m_Offset: {x: 0, y: -2, z: 0}
-  m_ProgressImage: {fileID: 662666509}
-  m_Label: {fileID: 814390428}
+  m_ProgressImage: {fileID: 1932169630}
+  m_Label: {fileID: 1365064359}
 --- !u!1 &1490656505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,7 +2705,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1684791079}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Camera Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4048,6 +4083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6902757879335432832}
+  - component: {fileID: 6088960243056863291}
   m_Layer: 0
   m_Name: AdditionalBoxer
   m_TagString: Untagged
@@ -4055,6 +4091,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &6088960243056863291
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6088960243056863290}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 62623e6e0b985a84fb569a3fcd3c64e9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6254690691760891303
 GameObject:
   m_ObjectHideFlags: 0

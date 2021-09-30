@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	[SerializeField] private Animator m_Animator = null;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public void UpdateState(float h, float v)
+	{
+		m_Animator.SetFloat("Horizontal", h);
+		m_Animator.SetFloat("Vertical", v);
+	}
 }

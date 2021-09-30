@@ -5,10 +5,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float m_MoveSpeed = 10;
+
+    [Header("Components")]
     [SerializeField] private EnemyCharacter m_Enemy = null;
+    [SerializeField] private PlayerAnimator m_Animator = null;
 
     private Rigidbody m_Rigidbody = null;
-
     private InputHandler m_Input = null;
 
     private Vector3 m_InputVector = Vector3.zero;
@@ -33,6 +35,8 @@ public class PlayerController : MonoBehaviour
 	{
         m_InputVector.x = m_Input.Horizontal();
         m_InputVector.z = m_Input.Vertical();
+
+        m_Animator.UpdateState(m_Input.Horizontal(), m_Input.Vertical());
 
         Vector3 dir = transform.TransformDirection(m_InputVector);
         Vector3 translation = dir * m_MoveSpeed * Time.deltaTime;
