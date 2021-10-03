@@ -15,7 +15,22 @@ public class HealthSystem : MonoBehaviour
 		}
 	}
 
+	public class OnDamageTakenEventArgs
+	{
+		public HealthSystem Sender { get; }
+		public int DamageAmount { get; }
+		public OnDamageTakenEventArgs(HealthSystem sender, int damageAmount)
+		{
+			Sender = sender;
+			DamageAmount = damageAmount;
+		}
+	}
+
+	public event Action<OnDamageTakenEventArgs> OnDamageTaken = null;
+
 	public event Action<OnHealthChangedEventArgs> OnHealthChanged = null;
+
+	public event Action<HealthSystem> OnDeath = null;
 
 	[SerializeField] private int m_StartAmount = 50;
 	[SerializeField] private int m_MaxAmount = 100;
@@ -42,7 +57,16 @@ public class HealthSystem : MonoBehaviour
 
     public void TakeDamage(int amount)
 	{
+		if (m_CurrentAmount == 0) return;
+
 		m_CurrentAmount = Mathf.Max(0, m_CurrentAmount - amount);
+
+		OnDamageTaken?.Invoke(new OnDamageTakenEventArgs(this, amount));
+
+		if (m_CurrentAmount == 0)
+		{
+			OnDeath?.Invoke(this);
+		}
 
 		ForceEvent();
 	}

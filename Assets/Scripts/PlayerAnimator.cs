@@ -11,4 +11,14 @@ public class PlayerAnimator : MonoBehaviour
 		m_Animator.SetFloat("Horizontal", h);
 		m_Animator.SetFloat("Vertical", v);
 	}
+
+	public void NearEnemy(bool value)
+	{
+		m_Animator.SetBool("IsNearEnemy", value);
+	}
+
+	public void WinState()
+	{
+		m_Animator.SetTrigger("Win");
+	}
 }

@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class EnemyCharacter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private HealthSystem m_HealthSystem = null;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public HealthSystem HealthSystem => m_HealthSystem;
 }
