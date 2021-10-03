@@ -12,14 +12,16 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private Image m_ProgressImage = null;
     [SerializeField] private Text m_Label = null;
 
-	public void OnEnable()
+	private void OnEnable()
 	{
 		m_Owner.OnHealthChanged += OnHealthChanged;
+		RoyalPunch.Instance.OnGameFinished += OnGameFinished;
 	}
 
 	private void OnDisable()
 	{
 		m_Owner.OnHealthChanged -= OnHealthChanged;
+		RoyalPunch.Instance.OnGameFinished -= OnGameFinished;
 	}
 
 	private void LateUpdate()
@@ -32,5 +34,10 @@ public class HealthBar : MonoBehaviour
 		m_Label.text = $"{m_Owner.CurrentAmount}";
 
 		m_ProgressImage.fillAmount = (float)m_Owner.CurrentAmount / m_Owner.MaxAmount;
+	}
+
+	private void OnGameFinished(bool success)
+	{
+		gameObject.SetActive(false);
 	}
 }

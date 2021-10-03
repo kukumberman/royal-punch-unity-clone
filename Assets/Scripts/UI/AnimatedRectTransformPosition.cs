@@ -12,6 +12,8 @@ public class AnimatedRectTransformPosition : AnimatedElement
 
     public override void ChangeState(bool active, bool isImmediately)
     {
+        m_IsActiveState = active;
+
         // todo: figure out how to dynamicly pass prop as arg instead writing same code for different components
 
         Vector3 startPosition = m_RectTransform.anchoredPosition;
