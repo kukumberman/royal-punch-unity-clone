@@ -3601,7 +3601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Joystick: {fileID: 1316611039}
-  m_IsMobileInput: 1
+  m_IsMobileInput: 0
   IsInputAllowed: 1
 --- !u!4 &295993975
 Transform:
@@ -8944,7 +8944,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739617820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.82, y: 0, z: -5.49}
+  m_LocalPosition: {x: -3.82, y: 0.12, z: -5.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1684791079}
@@ -8994,7 +8994,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &739617825
 MonoBehaviour:
@@ -28681,7 +28681,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6088960243056863290}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 31390d0429344e9459563fa38ebbde24, type: 3}
   m_Controller: {fileID: 9100000, guid: 62623e6e0b985a84fb569a3fcd3c64e9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
