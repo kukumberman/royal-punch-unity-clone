@@ -1,7 +1,11 @@
 # royal-punch-unity-clone
  
+## Description
+
+Unity developer position assessment task
 
 https://play.google.com/store/apps/details?id=royal.punch.box
+
 ```
 Все ассеты для Royal Punch. Полностью скопировать игру, в т.ч. окружение, управление, поведение, супер-атаки, эффекты и прочее.
 
@@ -9,9 +13,17 @@ https://play.google.com/store/apps/details?id=royal.punch.box
 
 Уточняю, что за этот срок цель не сделать проект, а показать то, что будет готово
 ```
-result is made based on this [video](https://www.youtube.com/watch?v=Oitr3PUut9s)
+## Showcase
 
-<details>
- <summary>weird ragdoll physics lmao</summary>
- https://user-images.githubusercontent.com/53304126/135768361-91221d60-0ea8-4e51-b79e-6f0f9b32a3c0.mp4
-</details>
+<table>
+  <tr>
+    <td>
+      <img src="./readme-content/preview_1.webp" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="./readme-content/preview_2.webp" />
+    </td>
+  </tr>
+</table>
